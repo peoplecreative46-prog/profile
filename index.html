@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Ahmad, S.H., M.H.</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/img/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/icons/favicon.svg" />
+    <link rel="shortcut icon" href="assets/img/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/img/icons/site.webmanifest" />
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Clean, Professional ATS-Friendly Layout Adjustments */
+        body { background-color: var(--bg-light); padding-top: 80px; }
+        .cv-container { max-width: 900px; margin: 0 auto; background: white; padding: 60px 80px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        
+        .section-title { font-size: 1.5rem; text-transform: uppercase; border-bottom: 2px solid var(--border-color); padding-bottom: 5px; margin-bottom: 20px; margin-top: 40px; text-align: left; }
+        .section-title::after { display: none; } /* Remove centered line */
+        
+        /* 1. Header */
+        .cv-header { display: flex; flex-direction: column; align-items: center; text-align: center; border-bottom: 2px solid var(--primary-color); padding-bottom: 20px; margin-bottom: 30px; }
+        .cv-header .profile-img { width: 135px; height: 180px; border-radius: 16px; object-fit: cover; margin-bottom: 15px; border: 3px solid var(--primary-color); box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 5px; background-color: white; }
+        .cv-header h1 { font-size: 2.8rem; margin-bottom: 5px; letter-spacing: 1px; }
+        .cv-header .contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; font-size: 0.95rem; color: var(--text-color); margin-top: 10px; }
+        .cv-header a { color: var(--primary-color); }
+        .cv-header a:hover { text-decoration: underline; }
+
+        /* General Content */
+        .item-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
+        .item-title { font-size: 1.15rem; font-weight: bold; color: var(--text-color); }
+        .item-subtitle { font-style: italic; color: var(--text-light); }
+        .item-date { font-weight: bold; color: var(--primary-color); font-size: 0.95rem; white-space: nowrap; }
+        .item-desc { margin-bottom: 20px; font-size: 0.95rem; }
+        .item-desc ul { padding-left: 20px; list-style-type: disc; margin-top: 8px; }
+        .item-desc li { margin-bottom: 5px; }
+
+        /* Skills */
+        .skills-group { margin-bottom: 15px; font-size: 0.95rem; }
+        .skills-group strong { color: var(--text-color); }
+
+        /* Attention Button */
+        @keyframes pulse-attention {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(37, 99, 235, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+        }
+        .btn-pulse {
+            animation: pulse-attention 2s infinite;
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn-pulse:hover {
+            animation: none;
+            background-color: var(--secondary-color);
+            color: white !important;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .cv-container { padding: 30px 20px; }
+            .item-row { flex-direction: column; justify-content: flex-start; }
+            .item-date { margin-top: 5px; }
+        }
+        
+        /* Print Styles for 'Download from Web' */
+        @media print {
+            body { background-color: white; padding-top: 0; }
+            .cv-container { box-shadow: none; padding: 0; margin: 0; max-width: 100%; }
+            .navbar, .no-print { display: none !important; }
+            a { text-decoration: none; color: black !important; }
+            .item-desc a { color: black !important; font-weight: normal; }
+            .section-title { margin-top: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">AHMAD.</a>
+            <ul class="nav-links">
+                <li><a href="#summary">Ringkasan</a></li>
+                <li><a href="#experience">Pengalaman</a></li>
+                <li><a href="#education">Pendidikan</a></li>
+                <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#publications">Publikasi & Sertifikasi</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="cv-container">
+        
+        <!-- 1. Informasi Kontak (Header) -->
+        <header class="cv-header">
+            <img src="assets/img/hero/profile.jpg.jpg" alt="Ahmad Profil" class="profile-img">
+            <h1>AHMAD, S.H., M.H.</h1>
+            <div class="contact-info">
+                <span><i class="fa-solid fa-location-dot"></i> Polewali Mandar, Sulawesi Barat</span>
+                <span><i class="fa-solid fa-phone"></i> +62 895-8066-34925</span>
+                <span><i class="fa-solid fa-envelope"></i> ahmad@iainpare.ac.id</span>
+            </div>
+            <div class="contact-info" style="margin-top: 5px;">
+                <span><a href="#"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/ammadung</a></span>
+                <span><a href="#"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a></span>
+                <span><a href="#"><i class="fa-brands fa-orcid"></i> ORCID</a></span>
+            </div>
+        </header>
+
+        <!-- 2. Ringkasan Profesional (Summary) -->
+        <section id="summary">
+            <h2 class="section-title">Ringkasan Profesional</h2>
+            <p style="text-align: justify; font-size: 0.95rem; line-height: 1.6;">
+                Peneliti akademik dan profesional di bidang manajemen publikasi ilmiah dengan keahlian khusus dalam Hukum Keluarga Islam dan teknologi informasi. Berpengalaman luas dalam merancang alur kerja penerbitan akademik, mengelola administrasi jurnal (Open Journal Systems/OJS), serta mengotomatisasi interaksi web. Memiliki rekam jejak lebih dari 40 publikasi ilmiah di jurnal nasional dan internasional bereputasi, serta andal dalam menjembatani riset interdisipliner dengan inovasi ekosistem digital untuk efisiensi tata kelola institusi akademik.
+            </p>
+        </section>
+
+        <!-- 3. Pengalaman Kerja (Work Experience) -->
+        <section id="experience">
+            <h2 class="section-title">Pengalaman Kerja</h2>
+
+            <div class="item">
+                <div class="item-row">
+                    <span class="item-title">Manajer Editorial & Editor Jurnal Ilmiah</span>
+                    <span class="item-date">2023 – Sekarang</span>
+                </div>
+                <div class="item-subtitle">Lingkup IAIN Parepare, Elhaq Publication Center, & Mutu Sinergi Eduka</div>
+                <div class="item-desc">
+                    <ul>
+                        <li>Mengonfigurasi direktori server Open Journal Systems (OJS) 2 & 3 dan menstrukturisasi metadata untuk memastikan kepatuhan terhadap standar indeksasi internasional (Scopus, DOAJ).</li>
+                        <li>Mengkoordinasikan proses <em>peer-review</em> dan penyuntingan naskah untuk lebih dari 20 jurnal akademik (termasuk JPIK, Aliftah, Pattola Syara').</li>
+                        <li>Merancang integrasi <em>plugin</em> ORCID, Crossref, dan optimasi metadata Dublin Core serta JSON-LD.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-row">
+                    <span class="item-title">Peneliti & Pendamping Akademik Pascasarjana</span>
+                    <span class="item-date">2024 – 2026</span>
+                </div>
+                <div class="item-subtitle">Pascasarjana IAIN Parepare</div>
+                <div class="item-desc">
+                    <ul>
+                        <li>Berperan sebagai Asisten Kriteria 1 (APT 2025) dan tergabung dalam tim perumusan borang Re-Akreditasi Program Studi Hukum Keluarga Islam.</li>
+                        <li>Terlibat aktif dalam riset hibah LITAPDIMAS sebagai peneliti dengan fokus pada resolusi konflik hukum keluarga dan akulturasi Islam-Budaya lokal.</li>
+                        <li>Memutakhirkan bahan ajar dan menyusun draf kurikulum Program Studi Pascasarjana berbasis kebutuhan industri akademik terkini.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="item-row">
+                    <span class="item-title">Sekretaris Yayasan & Pengurus Organisasi</span>
+                    <span class="item-date">2025 – 2031</span>
+                </div>
+                <div class="item-subtitle">El Haq Global Academic Center & Forum Mahasiswa Pascasarjana</div>
+                <div class="item-desc">
+                    <ul>
+                        <li>Menjabat sebagai Sekretaris Yayasan El Haq, mengelola operasional administratif dan memfasilitasi publikasi pusat edukasi.</li>
+                        <li>Memimpin Pengurus Harian Forum Mahasiswa Pascasarjana sebagai Ketua Umum, serta pernah menjabat sebagai Ketua Bidang Advokasi (2025).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-row">
+                    <span class="item-title">Delegasi Strategis & Tim Perumus Institusional</span>
+                    <span class="item-date">2025 – 2026</span>
+                </div>
+                <div class="item-subtitle">Pascasarjana IAIN Parepare & Inisiatif Kebudayaan</div>
+                <div class="item-desc">
+                    <ul>
+                        <li><strong>Tim Penyusun Rencana Strategis Pascasarjana (2025):</strong> Berkontribusi dalam perumusan Rencana Strategis Pascasarjana IAIN Parepare Tahun 2025 bersama jajaran rektorat dan direktur (Keputusan Rektor No. 760/2025).</li>
+                        <li><strong>Digitalisasi Naskah (Alih Aksara Kitab Al-Qoulushadiq):</strong> Tergabung dalam tim fungsional penyusunan proposal untuk konservasi dan digitalisasi arsip manuskrip Bugis Kuno berstandar PMK 32/2025.</li>
+                        <li><strong>Delegasi Kelompok Pelestari "Aplikasi Pappaseng" (2025):</strong> Merancang proposal pendanaan inovasi pelestarian budaya daerah dengan pendekatan <em>Digital Humanities</em> dan pengembangan aplikasi.</li>
+                        <li><strong>Kepanitiaan FMP IAIN Parepare:</strong> Mengkoordinasikan acara Pengukuhan Pengurus Forum Mahasiswa Pascasarjana sebagai bagian dari logistik organisasi akademik pada tahun 2026.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Pendidikan (Education) -->
+        <section id="education">
+            <h2 class="section-title">Pendidikan</h2>
+
+            <div class="item">
+                <div class="item-row">
+                    <span class="item-title">Program Doktor Studi Islam</span>
+                    <span class="item-date">Berlangsung</span>
+                </div>
+                <div class="item-subtitle">Pascasarjana IAIN Parepare</div>
+            </div>
+
+            <div class="item">
+                <div class="item-row">
+                    <span class="item-title">Magister Hukum Keluarga Islam (M.H.)</span>
+                    <span class="item-date">Lulus 2026 / 2023</span>
+                </div>
+                <div class="item-subtitle">Pascasarjana IAIN Parepare</div>
+            </div>
+
+            <div class="item">
+                <div class="item-row">
+                    <span class="item-title">Sarjana Hukum Keluarga Islam (S.H.)</span>
+                    <span class="item-date">Lulus 2019</span>
+                </div>
+                <div class="item-subtitle">IAIN Parepare</div>
+            </div>
+        </section>
+
+        <!-- 5. Keahlian Relevan (Skills) -->
+        <section id="skills">
+            <h2 class="section-title">Keahlian Relevan</h2>
+            <div class="item-desc">
+                <div class="skills-group">
+                    <strong>Keahlian Teknis:</strong> Python, Selenium WebDriver (Otomatisasi Web), HTML/CSS, Administrasi & Modifikasi Antarmuka Open Journal Systems (OJS 2 & 3), Konfigurasi Domain Kustom (DNS), Manajemen Metadata (Dublin Core, JSON-LD), Integrasi API (Crossref, ORCID).
+                </div>
+                <div class="skills-group">
+                    <strong>Keahlian Praktis:</strong> Manajemen Editorial, Koordinasi <em>Peer-Review</em>, Desain Materi Edukasi Visual, Penyusunan Borang Akreditasi, Metodologi Penelitian Interdisipliner (Hukum, Ekonomi, Sosial), Kepemimpinan Publik & Organisasi.
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Proyek dan Portofolio (Projects) -->
+        <section id="projects">
+            <h2 class="section-title">Proyek dan Portofolio</h2>
+
+            <div class="item">
+                <div class="item-row">
+                    <span class="item-title">Python/Selenium OJS Automation</span>
+                </div>
+                <div class="item-desc">
+                    <p style="margin-bottom: 5px;"><strong>Teknologi:</strong> Python, Selenium WebDriver.</p>
+                    <p>Skrip otomatisasi navigasi redaksional jurnal untuk proses unggah/unduh artikel massal, pendaftaran <em>reviewer</em> secara masif, dan validasi metadata jurnal. Proyek ini memangkas waktu kerja manual redaksi hingga 70% dan meningkatkan akurasi data submission.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-row">
+                    <span class="item-title">OJS Customization & Server Administration</span>
+                </div>
+                <div class="item-desc">
+                    <p style="margin-bottom: 5px;"><strong>Teknologi:</strong> OJS, PHP, HTML/CSS, DNS Management.</p>
+                    <p>Pengembangan antarmuka belasan jurnal ilmiah, penyesuaian domain (DNS), modifikasi bilah sisi dinamis, dan optimalisasi indeksasi global yang sukses membawa jurnal di bawah IAIN Parepare menembus standar indeksasi internasional secara lebih cepat.</p>
+                </div>
+            </div>
+
+            <div class="item" style="text-align: center; margin-top: 40px; padding: 30px 20px; background-color: var(--bg-light); border-radius: 12px; border: 1px dashed var(--primary-color);">
+                <h3 style="margin-bottom: 10px; color: var(--text-color); font-size: 1.25rem;">Jelajahi Karya Saya Secara Interaktif</h3>
+                <p style="margin-bottom: 20px; font-size: 0.95rem; color: var(--text-light); max-width: 600px; margin-left: auto; margin-right: auto;">Kunjungi situs web portofolio utama saya untuk melihat demonstrasi langsung dari proyek-proyek otomatisasi, kode, dan desain antarmuka yang telah saya kembangkan.</p>
+                <a href="https://peoplecreative46-prog.github.io/ammadung" target="_blank" class="btn-pulse">
+                    <i class="fa-solid fa-rocket" style="margin-right: 8px;"></i> Kunjungi Web Portofolio
+                </a>
+            </div>
+        </section>
+
+        <!-- 7. Publikasi, Sertifikasi & Pengalaman Tambahan -->
+        <section id="publications">
+            <h2 class="section-title">Publikasi, Sertifikasi & Pengalaman Tambahan</h2>
+
+            <div class="item-desc" style="margin-bottom: 40px;">
+                <p style="margin-bottom: 15px; font-size: 1.1rem; font-weight: bold; color: var(--text-color); border-bottom: 1px solid var(--border-color); padding-bottom: 5px;">Publikasi Ilmiah (Jurnal)</p>
+                <ol style="padding-left: 20px; font-size: 0.9rem; margin-bottom: 25px; line-height: 1.6;">
+                    <li style="margin-bottom: 8px;"><a href="https://journal.iain-manado.ac.id/index.php/JIS/article/view/4066" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Family Ijtihad and Ritual Adaptation among Urban Muslim Toraja Families: A Fiqh al-Aqalliyyat Perspective</strong></a> — <em>Jurnal Ilmiah Al-Syir'ah</em> (Scopus Q1, 2026)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://ejournal.uinsaid.ac.id/al-ahkam/article/view/11955" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Decentralized Finance (DeFi) and Islamic Economic Law: A Maqāṣid al-Sharīʿah Analysis of Blockchain-Based Financial Ecosystems</strong></a> — <em>Al-Ahkam</em> (Scopus Q1, 2026)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://jurnal.uinsu.ac.id/index.php/alqanun/article/view/28253" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Safeguarding Pilgrims from Fraud and Organizer Failures: An Islamic Law Analysis of Consumer Protection in Indonesia’s Hajj and Umrah Industry</strong></a> — <em>Al-Qanun</em> (Sinta 4, 2026)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://journal.iainkudus.ac.id/index.php/Yudisia/article/view/34046/0" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Environmental Fiqh Analysis of Coal-Fired Power Plant (PLTU) Barru Operational Impacts on Ecosystem Sustainability</strong></a> — <em>YUDISIA</em> (Sinta 2, 2026)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://jurnal.radenfatah.ac.id/index.php/usroh/article/view/34356/10321" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>THE IMPACT OF WAITHOOD AND SEX RECESSION ON DEMOGRAPHIC CRISIS: A MAQASID AL-SHARIAH ANALYSIS USING SADD AL-DHARI'AH</strong></a> — <em>Usroh</em> (Sinta 4, 2026)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://ejournal.uinmadura.ac.id/index.php/nuansa/article/view/20437/5418" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Analysis of ‘Urf on the Makkappa’ Tradition among the Pattae Community in Polewali Mandar</strong></a> — <em>NUANSA</em> (Sinta 4, 2026)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://e-journal.metrouniv.ac.id/Multazam/article/view/13043" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>CLIMATE CHANGE ADAPTATION STRATEGIES IN HAJJ MANAGEMENT: A ZERO-CARBON FRAMEWORK USING ECOLOGICAL MODERNIZATION THEORY AND TRIPLE BOTTOM LINE ANALYSIS</strong></a> — <em>Multazam</em> (Sinta 4, 2026)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://ejournal.uluwiyah.ac.id/index.php/qisth/article/view/481" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>IMPLEMENTASI ASTA PROTAS DI KUA: Analisis Hukum Keluarga Islam terhadap Bimbingan Perkawinan Inklusif untuk Keluarga Sakinah dan Pencegahan Perceraian Dini</strong></a> — <em>Jurnal HKI El-Qisth</em> (Nasional, 2026)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://tashdiruna.elhaqpubcenter.org/tasdiruna/article/view/7" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Maqāṣid al-Sharīʿah in the Age of Artificial Intelligence: Constructing an Islamic Ethical Framework for AI Governance and Regulation</strong></a> — <em>Tasdiruna</em> (Nasional, 2026)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://jurnal.ucy.ac.id/index.php/awtjhpsa/article/view/3480" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Analisis Jaringan Sosial Keagamaan Nahdlatul Ulama dalam Pengelolaan Konflik Antarumat Beragama di Indonesia</strong></a> — <em>Asas Wa Tandhim</em> (Sinta 4, 2026)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://jurnal.staim-probolinggo.ac.id/index.php/USRAH/article/view/2603" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>ADOPSI ANAK OLEH KOMUNITAS LGBTQ+ DALAM PERSPEKTIF HUKUM KELUARGA ISLAM TELAAH KOMPARATIF FIQH KLASIK DAN PENDEKATAN HUMANIS KONTEMPORER</strong></a> — <em>USRAH</em> (Sinta 4, 2026)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://journal.qiyam.or.id/index.php/sharia-law/article/view/7" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Analysis of the urgency of sharia fatwas on Zakat management for renewable energy an Islamic political perspective in the context of the climate crisis</strong></a> — <em>Int. Journal of Sharia and Law</em> (Internasional, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://journals.unisba.ac.id/index.php/JRHKI/article/view/8038" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Tanggung Jawab Sosial Aqiqah dalam Perspektif Fikih Lingkungan</strong></a> — <em>Jurnal Riset HKI</em> (Sinta 4, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://jurnal.untirta.ac.id/index.php/qanun/article/view/35495" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Islamic Law and Customary Law Conflict in Elopement: A Sociological Study of the Bugis-Makassar Community</strong></a> — <em>Qanun</em> (Sinta 3, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://ejurnal.iainpare.ac.id/index.php/marital_hki/article/view/14373" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>The Role of Mediation in Resolving Family Communication Conflicts: An Islamic Family Law Approach in Indonesia</strong></a> — <em>Jurnal Marital</em> (Sinta 5, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://journal.uinmataram.ac.id/index.php/alihkam/article/view/13360" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>TRANSFORMASI KOMUNIKASI KELUARGA DI ERA MEDIA SOSIAL ANTARA KEHANGATAN TATAP MUKA DAN TANTANGAN PRIVASI DIGITAL</strong></a> — <em>Al-IHKAM</em> (Sinta 4, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://journal.unugiri.ac.id/index.php/almaqashidi/article/view/4578" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Analisis pengaruh inflasi dalam penentuan nominal uang panai pada masyarakat Bugis</strong></a> — <em>Al Maqashidi</em> (Sinta 5, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://ejournal.indafa.ac.id/index.php/samawa/article/view/183" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Peluang dan Tantangan Teknologi Blockchain untuk Pencatatan Pernikahan di Indonesia</strong></a> — <em>SAMAWA</em> (Sinta 5, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://ejournal2.uika-bogor.ac.id/index.php/alinfaq/article/view/2328" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>ESG-Based Islamic Finance: Opportunities and Challenges in Building the Sustainability of Islamic Economics Amid Issues of Usury and Corruption</strong></a> — <em>Al-Infaq</em> (Sinta 3, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://ejournal.uit-lirboyo.ac.id/index.php/legitima/article/view/8109" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Moral Negotiations and Islamic Family Law in the Digital Age: A Study of the Sugar Daddy Phenomenon Among Muslim Youth</strong></a> — <em>Legitima</em> (Sinta 2, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://jurnal.stain-madina.ac.id/index.php/el-ahli/article/view/2631" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>WIFE'S MAINTENANCE RIGHTS IN NOMADIC HOUSEHOLDS: PERSPECTIVE OF CONTEMPORARY FAMILY LAW</strong></a> — <em>EL-AHLI</em> (Sinta 5, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://journal.uin-alauddin.ac.id/index.php/Iqtisaduna/article/download/58457/24044/200775" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Transparansi Akad Wakalah Bil Ujrah dalam Layanan Digital Banking Syariah: Analisis pada Interface Aplikasi</strong></a> — <em>Jurnal Iqtisaduna</em> (Sinta 4, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://ejurnal.iainpare.ac.id/index.php/almaiyyah/article/view/14946" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Postcolonial Feminism: Reinterpreting Religious Texts for Global Gender Justice</strong></a> — <em>AL-MAIYYAH</em> (Sinta 4, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://ejournal.yasin-alsys.org/ahkam/article/view/7629" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Analisis Implikasi Kebijakan Penghapusan Dispensasi Perkawinan Anak di Bawah Umur terhadap Trauma Psikologis Jangka Panjang pada Generasi Muda di Kabupaten Majene</strong></a> — <em>AHKAM</em> (Sinta 5, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="http://ejurnal.iainpare.ac.id/index.php/hukamaa/article/view/16317" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Analisis Fenomena Marriage is Scary Pada Kalangan Mahasiswa IAIN Parepare: Dampak Psikososial dan Media Sosial terhadap Kesiapan Pernikahan</strong></a> — <em>Al-Hukamaa</em> (Nasional, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://journal.um-surabaya.ac.id/Maqasid/article/view/27850" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Polemik Usia Baligh Sebagai Kriteria Pemimpin Dalam Fikih Islam</strong></a> — <em>Maqasid</em> (Sinta 4, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://journal.abdurraufinstitute.org/index.php/ahlika/article/view/405/338" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Reconstruction of Equality Before the Law: An Islamic Legal Perspective in the Context of Social Inequality</strong></a> — <em>Ahlika</em> (Nasional, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://ejurnal.iainpare.ac.id/index.php/hukamaa/article/view/14806" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Tinjauan Hukum Islam terhadap Implementasi Program Penurunan Stunting BKKBN dalam Perspektif Nafkah dan Kesejahteraan Keluarga</strong></a> — <em>Al-Hukamaa</em> (Nasional, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://journal.mediahajiumrah.com/haramain/article/view/4" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Emotional-Religious Ponzi Scheme: Reconstructing Fraud Triangle Theory in Mass Umrah Agent Fraud</strong></a> — <em>Haramain</em> (Nasional, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://journal.ibrahimy.ac.id/index.php/alhukmi/article/view/8290" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>ZAKAT PROFESI BERBASIS KELUARGA SEBAGAI INSTRUMEN REDISTRIBUSI: STUDI KOMPARATIF FIQH MUAMALAH DAN HUKUM NAFAKAH UNTUK KETAHANAN EKONOMI RUMAH TANGGA</strong></a> — <em>Al-Hukmi</em> (Nasional, 2025)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://journal.insyaka.ac.id/index.php/AF/article/view/1165" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Problematika Penerapan Hukum Perkawinan Islam di Era Digital: Studi Kasus Pernikahan Online di Indonesia</strong></a> — <em>Al Fuadiy</em> (Sinta 4, 2024)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://ejurnal.iainpare.ac.id/index.php/hukamaa/article/view/10853" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Tinjauan Maqāṣid Syari’ah terhadap Perjanjian Perkawinan sebagai Jaminan Keluarga Bahagia</strong></a> — <em>Al-Hukamaa</em> (Nasional, 2024)</li>
+                    <li style="margin-bottom: 8px;"><a href="https://jurnal.umsu.ac.id:444/index.php/almarshad/article/view/16982/0" target="_blank" style="color: var(--primary-color); text-decoration: none;"><strong>Historical Analysis and Calibration of the Oldest Al-Mujahidin Mosque, Parepare City</strong></a> — <em>Al-Marshad</em> (Sinta 3, 2023)</li>
+                </ol>
+
+                <p style="margin-bottom: 15px; font-size: 1.1rem; font-weight: bold; color: var(--text-color); border-bottom: 1px solid var(--border-color); padding-bottom: 5px;">Buku, Karya Ilmiah, & Pengabdian</p>
+                <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; list-style-type: square;">
+                    <li style="margin-bottom: 8px;"><strong>HUKUM KELUARGA ISLAM KONTEMPORER: DINAMIKA, INOVASI, DAN KEADILAN GENDER</strong> — <em>Buku</em> (2025)</li>
+                    <li style="margin-bottom: 8px;"><strong>Nuzulul Quran Dan Asbab Nuzul</strong> — <em>Karya Ilmiah</em> (2025)</li>
+                    <li style="margin-bottom: 8px;"><strong>Sejarah dan Pemikiran Hukum Islam: Mazhab Hukum Keluarga Imam Syafi’i</strong> — <em>Karya Ilmiah</em> (2025)</li>
+                    <li style="margin-bottom: 8px;"><strong>Struktur Dan Fungsi Keluarga Dalam Budaya Bugis Makassar Dan Mandar</strong> — <em>Karya Ilmiah</em> (2025)</li>
+                    <li style="margin-bottom: 8px;"><strong>Perbandingan Hukum Keluarga Islam Di Somalia Dan Indonesia</strong> — <em>Karya Ilmiah</em> (2024)</li>
+                    <li style="margin-bottom: 8px;"><strong>Pembaruan Hukum Keluarga Di Negara Muslim Modern</strong> — <em>Karya Ilmiah</em> (2024)</li>
+                    <li style="margin-bottom: 8px;"><strong>Tantangan Hukum Dan Solusi Sosial Terhadap Gelandangan Dan PSK Di Kota Parepare</strong> — <em>Karya Ilmiah</em> (2024)</li>
+                    <li style="margin-bottom: 8px;"><strong>Implementasi Hukum Sebagai Instrumen Untuk Mencapai Keadilan Sosial Di Indonesia</strong> — <em>Karya Ilmiah</em> (2024)</li>
+                    <li style="margin-bottom: 8px;"><strong>STUDI PANDANGAN MUI SULAWESI SELATAN TERHADAP PELUANG PENGGUNAAN ARTIFICIAL INTELLIGENCE DALAM PERUMUSAN FATWA HUKUM KELUARGA</strong> — <em>Tesis</em> (2026)</li>
+                    <li style="margin-bottom: 8px;"><strong>Studi Penentuan Arah Kiblat Masjid Al Mujahidin Kota Parepare</strong> — <em>Skripsi</em> (2023)</li>
+                    <li style="margin-bottom: 8px;"><strong>Posko Community Service Lecture 80 in Management Establishment and Development Qur’an Education Kindergarden</strong> — <em>Pengabdian</em> (2023)</li>
+                </ul>
+            </div>
+
+            <div class="item-desc">
+                <p style="margin-bottom: 10px; font-weight: bold; color: var(--text-color);">Sertifikasi & Keterlibatan Akademik:</p>
+                <ul>
+                    <li><strong>Narasumber & Pemateri:</strong> Pengisi materi dalam lokakarya "Metode Penelitian Kuantitatif" dan "Optimalisasi AI dalam Artikel" di PARADIGMA (2025).</li>
+                    <li><strong>Kepanitiaan Internasional:</strong> Anggota pelaksana kuliah tamu internasional (International Guest Lecture of Postgraduate Academic Studies / IGLoPAS 2026).</li>
+                    <li><strong>Sertifikasi Kompetensi:</strong> Sertifikasi Ma'had Al-Jami'ah (Intermediate Level, Nilai 83.2 / A) dan English Language Program (Predikat A).</li>
+                </ul>
+            </div>
+        </section>
+        
+        <div class="no-print" style="text-align: center; margin-top: 50px; font-size: 0.9rem; color: var(--text-light);">
+            <a href="assets/docs/CV%20AHMAD.pdf" class="btn btn-primary" style="margin-bottom: 20px; margin-right: 10px;">Download File PDF</a>
+            <button onclick="window.print()" class="btn btn-secondary" style="margin-bottom: 20px; font-family: inherit; font-size: 1rem;">Cetak / Simpan dari Web</button>
+            <p>&copy; 2026 Ahmad. Disusun untuk standar profesional & ATS-Friendly.</p>
+        </div>
+
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
