@@ -25,17 +25,49 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // 2. Navbar shrink effect on scroll
+    // 2. Responsive navigation and scroll state
     const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.padding = '10px 0';
-            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            navbar.style.padding = '20px 0';
-            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-        }
-    });
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('is-scrolled', window.scrollY > 24);
+        }, { passive: true });
+    }
+
+    if (navToggle && navLinks) {
+        const closeNavigation = () => {
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-label', 'Buka navigasi');
+            navLinks.classList.remove('is-open');
+            navToggle.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+        };
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!isOpen));
+            navToggle.setAttribute('aria-label', isOpen ? 'Buka navigasi' : 'Tutup navigasi');
+            navLinks.classList.toggle('is-open', !isOpen);
+            navToggle.innerHTML = `<i class="fa-solid fa-${isOpen ? 'bars' : 'xmark'}" aria-hidden="true"></i>`;
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeNavigation);
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') closeNavigation();
+        });
+
+        document.addEventListener('click', event => {
+            if (!navbar.contains(event.target)) closeNavigation();
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 780) closeNavigation();
+        });
+    }
 
     // 3. Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

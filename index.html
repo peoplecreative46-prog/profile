@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Ahmad, S.H., M.H.</title>
+    <title>Ahmad, S.H., M.H. — Profil Akademik</title>
+    <meta name="description" content="Profil akademik Ahmad, peneliti Hukum Keluarga Islam, editor jurnal, dan pengelola publikasi ilmiah di IAIN Parepare.">
+    <meta name="theme-color" content="#f5f6f2">
     
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="assets/img/icons/favicon-96x96.png" sizes="96x96" />
@@ -83,44 +85,69 @@
             .section-title { margin-top: 20px; }
         }
     </style>
+    <link rel="stylesheet" href="assets/css/profile.css">
 </head>
 <body>
-    <nav class="navbar">
+    <a class="skip-link" href="#summary">Lewati ke konten</a>
+    <nav class="navbar" aria-label="Navigasi utama">
         <div class="container">
-            <a href="#" class="logo">AHMAD.</a>
-            <ul class="nav-links">
+            <a href="#top" class="logo">AHMAD<span>.</span></a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Buka navigasi">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#summary">Ringkasan</a></li>
                 <li><a href="#experience">Pengalaman</a></li>
                 <li><a href="#education">Pendidikan</a></li>
                 <li><a href="#skills">Keahlian</a></li>
                 <li><a href="#projects">Proyek</a></li>
-                <li><a href="#publications">Publikasi & Sertifikasi</a></li>
+                <li><a href="#publications">Publikasi</a></li>
             </ul>
+            <a class="nav-cta" href="assets/docs/CV%20AHMAD.pdf"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i> Unduh CV</a>
         </div>
     </nav>
 
-    <div class="cv-container">
+    <main class="cv-container" id="top">
         
         <!-- 1. Informasi Kontak (Header) -->
         <header class="cv-header">
-            <img src="assets/img/hero/profile.jpg" alt="Ahmad Profil" class="profile-img">
-            <h1>AHMAD, S.H., M.H.</h1>
-            <div class="contact-info">
-                <span><i class="fa-solid fa-location-dot"></i> Polewali Mandar, Sulawesi Barat</span>
-                <span><i class="fa-solid fa-phone"></i> +62 895-8066-34925</span>
-                <span><i class="fa-solid fa-envelope"></i> ahmad@iainpare.ac.id</span>
+            <div class="cv-intro">
+                <p class="eyebrow"><span class="status-dot"></span> Profil akademik & profesional</p>
+                <h1>Ahmad, <span>S.H., M.H.</span></h1>
+                <p class="cv-headline">Peneliti Hukum Keluarga Islam <span aria-hidden="true">·</span> Editor Jurnal <span aria-hidden="true">·</span> Pengelola Publikasi Ilmiah</p>
+                <p class="cv-lead">Menghubungkan riset hukum Islam, inovasi digital, dan tata kelola publikasi akademik.</p>
+                <div class="contact-info">
+                    <a href="mailto:ahmad@iainpare.ac.id"><i class="fa-solid fa-envelope" aria-hidden="true"></i> ahmad@iainpare.ac.id</a>
+                    <a href="tel:+62895806634925"><i class="fa-solid fa-phone" aria-hidden="true"></i> +62 895-8066-34925</a>
+                    <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Polewali Mandar, Sulawesi Barat</span>
+                </div>
+                <div class="profile-links">
+                    <a class="profile-link orcid-link" href="https://orcid.org/0009-0000-7461-3158" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-orcid" aria-hidden="true"></i> <span>ORCID</span> <strong>0009-0000-7461-3158</strong> <i class="fa-solid fa-arrow-up-right-from-square external-icon" aria-hidden="true"></i>
+                    </a>
+                    <span class="profile-link"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> linkedin.com/in/ammadung</span>
+                    <span class="profile-link"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Google Scholar</span>
+                </div>
+                <div class="hero-actions no-print">
+                    <a class="btn btn-primary" href="https://peoplecreative46-prog.github.io/ammadung" target="_blank" rel="noopener noreferrer">
+                        Jelajahi portofolio <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
+                    <button class="btn btn-secondary" type="button" onclick="window.print()">
+                        <i class="fa-solid fa-print" aria-hidden="true"></i> Cetak profil
+                    </button>
+                </div>
             </div>
-            <div class="contact-info" style="margin-top: 5px;">
-                <span><a href="#"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/ammadung</a></span>
-                <span><a href="#"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a></span>
-                <span><a href="#"><i class="fa-brands fa-orcid"></i> ORCID</a></span>
+            <div class="profile-photo-wrap">
+                <span class="photo-orbit" aria-hidden="true"></span>
+                <img src="assets/img/hero/profile.jpg" alt="Foto profil Ahmad" class="profile-img">
+                <span class="photo-caption"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> IAIN Parepare</span>
             </div>
         </header>
 
         <!-- 2. Ringkasan Profesional (Summary) -->
         <section id="summary">
             <h2 class="section-title">Ringkasan Profesional</h2>
-            <p style="text-align: justify; font-size: 0.95rem; line-height: 1.6;">
+            <p class="summary-copy">
                 Peneliti akademik dan profesional di bidang manajemen publikasi ilmiah dengan keahlian khusus dalam Hukum Keluarga Islam dan teknologi informasi. Berpengalaman luas dalam merancang alur kerja penerbitan akademik, mengelola administrasi jurnal (Open Journal Systems/OJS), serta mengotomatisasi interaksi web. Memiliki rekam jejak lebih dari 40 publikasi ilmiah di jurnal nasional dan internasional bereputasi, serta andal dalam menjembatani riset interdisipliner dengan inovasi ekosistem digital untuk efisiensi tata kelola institusi akademik.
             </p>
         </section>
@@ -339,7 +366,7 @@
             <p>&copy; 2026 Ahmad. Disusun untuk standar profesional & ATS-Friendly.</p>
         </div>
 
-    </div>
+    </main>
 
     <script src="assets/js/main.js"></script>
 </body>
